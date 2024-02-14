@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <label>Id:</label>
+      <input id="id" />
+      <label>Type:</label>
+      <input id="type" />
+      <label>Image:</label>
+      <input type="file" id="imageInput" />
+      <button onclick="addTheDuck()">Add the duck</button>
+    </div>
+    <script>
+      let host = "http://localhost:8080";
+      async function addTheDuck() {
+        let message = "";
+        let duckId = document.getElementById("id").value;
+        let duckType = document.getElementById("type").value;
+        let duck = { id: duckId, type: duckType };
+        console.log("You entered:" + JSON.stringify(duck));
+
+        //TODO
+      }
+    </script>
+  </body>
+</html>
